@@ -14,6 +14,7 @@ show:             ## Show the current environment.
 
 .PHONY: install
 install:          ## Install the project in dev mode.
+	@poetry config virtualenvs.in-project true
 	@poetry install
 
 .PHONY: fmt
@@ -26,9 +27,11 @@ fmt:              ## Format code using black & isort.
 .PHONY: lint
 lint:             ## Run pep8, black, mypy linters.
 	@poetry run flake8 src/
+	@poetry run flake8 tests/
 	@poetry run black -l 79 --check src/
 	@poetry run black -l 79 --check tests/
 	@poetry run mypy --ignore-missing-imports src/
+	@poetry run mypy --ignore-missing-imports tests/
 
 .PHONY: test
 test: lint        ## Run tests and generate coverage report.

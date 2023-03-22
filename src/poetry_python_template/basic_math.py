@@ -16,3 +16,4 @@ def dec_num(a, b):
 
 if __name__ == "__main__":
     print(add_num(3, 4))
+    print(add_num(4, 4))
