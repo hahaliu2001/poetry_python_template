@@ -63,6 +63,8 @@ push_site:         ## push docs to github gh-pages
 	
 .PHONY: clean
 clean:            ## Clean unused files.
+	@find . -name '*.pyc' -type f -delete ;
+	@find . -type d -name "__pycache__" -delete ;
 	@rm -rf .pytest_cache
 	@rm -rf .mypy_cache
 	@rm -rf build
