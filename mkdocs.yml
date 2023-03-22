@@ -1,0 +1,18 @@
+site_name: docs_example
+site_description: example to create a mkdocs site
+
+nav:
+- Home: index.md
+- title:
+  - page1: page1.md
+  - page2: page2.md
+
+theme:
+    name: mkdocs
+    highlightjs: true
+    hljs_languages:
+        - yaml
+        - django
+
+plugins:
+    - search
