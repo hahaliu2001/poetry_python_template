@@ -124,3 +124,8 @@ poetry install
 
 ### run test
 poetry run pytest -v --cov-config .coveragerc --cov=src -l -s --tb=short --maxfail=1 tests/
+
+
+## add jupyter to poetry
+` poetry add --group dev jupyter`
+after the instllation, we can directly run ipynb file
