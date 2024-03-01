@@ -129,3 +129,17 @@ poetry run pytest -v --cov-config .coveragerc --cov=src -l -s --tb=short --maxfa
 ## add jupyter to poetry
 ` poetry add --group dev jupyter`
 after the instllation, we can directly run ipynb file
+
+## use poetry in windows 10 by vscode
+open vscode, seeting -> python create venv environment -> choose python version
+check python version: python --version
+### intall poetry
+python -m pip install poetry
+
+makefile doesn't work in windows, need copy and run the command
+### poery environment
+poetry config virtualenvs.in-project true
+poetry install
+
+### run test
+poetry run pytest -v --cov-config .coveragerc --cov=src -l -s --tb=short --maxfail=1 tests/
